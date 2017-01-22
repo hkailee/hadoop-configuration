@@ -166,3 +166,20 @@ STARTUP_MSG:   java = 1.7.0_80
 2017-01-22 18:20:28,344 INFO org.apache.hadoop.yarn.server.nodemanager.security.NMTokenSecretManagerInNM: Rolling master-key for container-tokens, got key with id -727407542
 2017-01-22 18:20:28,345 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Registered with ResourceManager as 27-41.priv23.nus.edu.sg:51128 with total resource of <memory:8192, vCores:8>
 2017-01-22 18:20:28,345 INFO org.apache.hadoop.yarn.server.nodemanager.NodeStatusUpdaterImpl: Notifying ContainerManager to unblock new container-requests
+2017-01-22 23:51:08,387 ERROR org.apache.hadoop.yarn.server.nodemanager.NodeManager: RECEIVED SIGNAL 15: SIGTERM
+2017-01-22 23:51:08,398 INFO org.mortbay.log: Stopped HttpServer2$SelectChannelConnectorWithSafeStartup@0.0.0.0:8042
+2017-01-22 23:51:08,399 INFO org.apache.hadoop.ipc.Server: Stopping server on 51128
+2017-01-22 23:51:08,400 INFO org.apache.hadoop.ipc.Server: Stopping IPC Server Responder
+2017-01-22 23:51:08,400 INFO org.apache.hadoop.ipc.Server: Stopping IPC Server listener on 51128
+2017-01-22 23:51:08,401 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl: ResourceCalculatorPlugin is unavailable on this system. org.apache.hadoop.yarn.server.nodemanager.containermanager.monitor.ContainersMonitorImpl is disabled.
+2017-01-22 23:51:08,414 INFO org.apache.hadoop.ipc.Server: Stopping server on 8040
+2017-01-22 23:51:08,415 INFO org.apache.hadoop.ipc.Server: Stopping IPC Server listener on 8040
+2017-01-22 23:51:08,415 INFO org.apache.hadoop.ipc.Server: Stopping IPC Server Responder
+2017-01-22 23:51:08,416 INFO org.apache.hadoop.yarn.server.nodemanager.containermanager.localizer.ResourceLocalizationService: Public cache exiting
+2017-01-22 23:51:08,416 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Stopping NodeManager metrics system...
+2017-01-22 23:51:08,417 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: NodeManager metrics system stopped.
+2017-01-22 23:51:08,418 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: NodeManager metrics system shutdown complete.
+2017-01-22 23:51:08,418 INFO org.apache.hadoop.yarn.server.nodemanager.NodeManager: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NodeManager at 27-41.priv23.nus.edu.sg/172.23.27.41
+************************************************************/

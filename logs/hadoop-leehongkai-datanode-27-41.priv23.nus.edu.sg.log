@@ -256,3 +256,29 @@ No GCs detected
 No GCs detected
 2017-01-22 21:15:38,448 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Successfully sent block report 0x149c1a57150c32f8,  containing 1 storage report(s), of which we sent 1. The reports had 0 total blocks and used 1 RPC(s). This took 1 msec to generate and 5 msecs for RPC and NN processing. Got back one command: FinalizeCommand/5.
 2017-01-22 21:15:38,449 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: Got finalize command for block pool BP-1785906056-172.23.27.41-1485076572679
+2017-01-22 23:48:31,403 WARN org.apache.hadoop.hdfs.server.datanode.DataNode: IOException in offerService
+java.io.EOFException: End of File Exception between local host is: "lees-macbook-pro-2.local/192.168.1.4"; destination host is: "localhost":8020; : java.io.EOFException; For more details see:  http://wiki.apache.org/hadoop/EOFException
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
+	at org.apache.hadoop.net.NetUtils.wrapWithMessage(NetUtils.java:792)
+	at org.apache.hadoop.net.NetUtils.wrapException(NetUtils.java:765)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1479)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1412)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:229)
+	at com.sun.proxy.$Proxy14.sendHeartbeat(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.DatanodeProtocolClientSideTranslatorPB.sendHeartbeat(DatanodeProtocolClientSideTranslatorPB.java:152)
+	at org.apache.hadoop.hdfs.server.datanode.BPServiceActor.sendHeartBeat(BPServiceActor.java:554)
+	at org.apache.hadoop.hdfs.server.datanode.BPServiceActor.offerService(BPServiceActor.java:653)
+	at org.apache.hadoop.hdfs.server.datanode.BPServiceActor.run(BPServiceActor.java:824)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.hadoop.ipc.Client$Connection.receiveRpcResponse(Client.java:1084)
+	at org.apache.hadoop.ipc.Client$Connection.run(Client.java:979)
+2017-01-22 23:48:34,129 ERROR org.apache.hadoop.hdfs.server.datanode.DataNode: RECEIVED SIGNAL 15: SIGTERM
+2017-01-22 23:48:34,132 INFO org.apache.hadoop.hdfs.server.datanode.DataNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down DataNode at 27-41.priv23.nus.edu.sg/172.23.27.41
+************************************************************/

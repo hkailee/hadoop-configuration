@@ -2026,3 +2026,8 @@ No GCs detected
 2017-01-22 23:20:55,057 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Downloaded file fsimage.ckpt_0000000000000000026 size 948 bytes.
 2017-01-22 23:20:55,059 INFO org.apache.hadoop.hdfs.server.namenode.NNStorageRetentionManager: Going to retain 2 images with txid >= 23
 2017-01-22 23:20:55,059 INFO org.apache.hadoop.hdfs.server.namenode.NNStorageRetentionManager: Purging old image FSImageFile(file=/tmp/hadoop-leehongkai/dfs/name/current/fsimage_0000000000000000020, cpktTxId=0000000000000000020)
+2017-01-22 23:48:28,894 ERROR org.apache.hadoop.hdfs.server.namenode.NameNode: RECEIVED SIGNAL 15: SIGTERM
+2017-01-22 23:48:28,900 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at 27-41.priv23.nus.edu.sg/172.23.27.41
+************************************************************/
