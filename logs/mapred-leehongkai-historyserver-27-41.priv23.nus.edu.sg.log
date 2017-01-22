@@ -61,3 +61,788 @@ STARTUP_MSG:   java = 1.8.0_112
 2017-01-22 17:40:03,695 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
 2017-01-22 17:43:03,692 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
 2017-01-22 17:46:03,694 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 17:49:03,695 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 17:52:03,699 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 17:55:03,703 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 17:58:03,700 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 17:58:03,736 ERROR org.apache.hadoop.mapreduce.v2.hs.JobHistory: Error while scanning intermediate done dir 
+org.apache.hadoop.ipc.RemoteException(java.lang.InternalError): java.io.FileNotFoundException: /Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+	at sun.misc.URLClassPath$JarLoader.getResource(URLClassPath.java:1003)
+	at sun.misc.URLClassPath.getResource(URLClassPath.java:212)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:365)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:411)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.util.ResourceBundle$RBClassLoader.loadClass(ResourceBundle.java:503)
+	at java.util.ResourceBundle$Control.newBundle(ResourceBundle.java:2640)
+	at java.util.ResourceBundle.loadBundle(ResourceBundle.java:1501)
+	at java.util.ResourceBundle.findBundle(ResourceBundle.java:1465)
+	at java.util.ResourceBundle.findBundle(ResourceBundle.java:1419)
+	at java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1361)
+	at java.util.ResourceBundle.getBundle(ResourceBundle.java:845)
+	at java.util.logging.Level.computeLocalizedLevelName(Level.java:265)
+	at java.util.logging.Level.getLocalizedLevelName(Level.java:324)
+	at java.util.logging.SimpleFormatter.format(SimpleFormatter.java:165)
+	at java.util.logging.StreamHandler.publish(StreamHandler.java:211)
+	at java.util.logging.ConsoleHandler.publish(ConsoleHandler.java:116)
+	at java.util.logging.Logger.log(Logger.java:738)
+	at java.util.logging.Logger.doLog(Logger.java:765)
+	at java.util.logging.Logger.log(Logger.java:876)
+	at com.google.common.cache.LocalCache$Segment$1.run(LocalCache.java:2366)
+	at com.google.common.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:253)
+	at com.google.common.util.concurrent.ExecutionList$RunnableExecutorPair.execute(ExecutionList.java:149)
+	at com.google.common.util.concurrent.ExecutionList.add(ExecutionList.java:105)
+	at com.google.common.util.concurrent.AbstractFuture.addListener(AbstractFuture.java:155)
+	at com.google.common.cache.LocalCache$Segment.loadAsync(LocalCache.java:2357)
+	at com.google.common.cache.LocalCache$Segment.refresh(LocalCache.java:2421)
+	at com.google.common.cache.LocalCache$Segment.scheduleRefresh(LocalCache.java:2399)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2218)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3965)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3969)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4829)
+	at org.apache.hadoop.security.Groups.getGroups(Groups.java:182)
+	at org.apache.hadoop.security.UserGroupInformation.getGroupNames(UserGroupInformation.java:1554)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.<init>(FSPermissionChecker.java:87)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirectory.getPermissionChecker(FSDirectory.java:1668)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirectory.getPermissionChecker(FSDirectory.java:1658)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirStatAndListingOp.getListingInt(FSDirStatAndListingOp.java:51)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getListing(FSNamesystem.java:4486)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getListing(NameNodeRpcServer.java:999)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getListing(ClientNamenodeProtocolServerSideTranslatorPB.java:634)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:616)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:982)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2049)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2045)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1698)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2043)
+Caused by: java.io.FileNotFoundException: /Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+	at sun.misc.URLClassPath$JarLoader.getJarFile(URLClassPath.java:891)
+	at sun.misc.URLClassPath$JarLoader.access$700(URLClassPath.java:756)
+	at sun.misc.URLClassPath$JarLoader$1.run(URLClassPath.java:838)
+	at sun.misc.URLClassPath$JarLoader$1.run(URLClassPath.java:831)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.misc.URLClassPath$JarLoader.ensureOpen(URLClassPath.java:830)
+	at sun.misc.URLClassPath$JarLoader.getResource(URLClassPath.java:1001)
+	... 54 more
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1475)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1412)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:229)
+	at com.sun.proxy.$Proxy9.getListing(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getListing(ClientNamenodeProtocolTranslatorPB.java:573)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:191)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+	at com.sun.proxy.$Proxy10.getListing(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.listPaths(DFSClient.java:2086)
+	at org.apache.hadoop.fs.Hdfs$DirListingIterator.<init>(Hdfs.java:208)
+	at org.apache.hadoop.fs.Hdfs$DirListingIterator.<init>(Hdfs.java:195)
+	at org.apache.hadoop.fs.Hdfs$2.<init>(Hdfs.java:177)
+	at org.apache.hadoop.fs.Hdfs.listStatusIterator(Hdfs.java:177)
+	at org.apache.hadoop.fs.FileContext$22.next(FileContext.java:1494)
+	at org.apache.hadoop.fs.FileContext$22.next(FileContext.java:1489)
+	at org.apache.hadoop.fs.FSLinkResolver.resolve(FSLinkResolver.java:90)
+	at org.apache.hadoop.fs.FileContext.listStatus(FileContext.java:1489)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.listFilteredStatus(JobHistoryUtils.java:505)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:452)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:444)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:439)
+	at org.apache.hadoop.mapreduce.v2.hs.HistoryFileManager.scanIntermediateDirectory(HistoryFileManager.java:839)
+	at org.apache.hadoop.mapreduce.v2.hs.JobHistory$MoveIntermediateToDoneRunnable.run(JobHistory.java:189)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-01-22 18:01:03,702 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 18:01:03,709 ERROR org.apache.hadoop.mapreduce.v2.hs.JobHistory: Error while scanning intermediate done dir 
+org.apache.hadoop.ipc.RemoteException(java.lang.InternalError): java.io.FileNotFoundException: /Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+	at sun.misc.URLClassPath$JarLoader.getResource(URLClassPath.java:1003)
+	at sun.misc.URLClassPath.getResource(URLClassPath.java:212)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:365)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:411)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.util.ResourceBundle$RBClassLoader.loadClass(ResourceBundle.java:503)
+	at java.util.ResourceBundle$Control.newBundle(ResourceBundle.java:2640)
+	at java.util.ResourceBundle.loadBundle(ResourceBundle.java:1501)
+	at java.util.ResourceBundle.findBundle(ResourceBundle.java:1465)
+	at java.util.ResourceBundle.findBundle(ResourceBundle.java:1419)
+	at java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1361)
+	at java.util.ResourceBundle.getBundle(ResourceBundle.java:845)
+	at java.util.logging.Level.computeLocalizedLevelName(Level.java:265)
+	at java.util.logging.Level.getLocalizedLevelName(Level.java:324)
+	at java.util.logging.SimpleFormatter.format(SimpleFormatter.java:165)
+	at java.util.logging.StreamHandler.publish(StreamHandler.java:211)
+	at java.util.logging.ConsoleHandler.publish(ConsoleHandler.java:116)
+	at java.util.logging.Logger.log(Logger.java:738)
+	at java.util.logging.Logger.doLog(Logger.java:765)
+	at java.util.logging.Logger.log(Logger.java:876)
+	at com.google.common.cache.LocalCache$Segment$1.run(LocalCache.java:2366)
+	at com.google.common.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:253)
+	at com.google.common.util.concurrent.ExecutionList$RunnableExecutorPair.execute(ExecutionList.java:149)
+	at com.google.common.util.concurrent.ExecutionList.add(ExecutionList.java:105)
+	at com.google.common.util.concurrent.AbstractFuture.addListener(AbstractFuture.java:155)
+	at com.google.common.cache.LocalCache$Segment.loadAsync(LocalCache.java:2357)
+	at com.google.common.cache.LocalCache$Segment.refresh(LocalCache.java:2421)
+	at com.google.common.cache.LocalCache$Segment.scheduleRefresh(LocalCache.java:2399)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2218)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3965)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3969)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4829)
+	at org.apache.hadoop.security.Groups.getGroups(Groups.java:182)
+	at org.apache.hadoop.security.UserGroupInformation.getGroupNames(UserGroupInformation.java:1554)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.<init>(FSPermissionChecker.java:87)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirectory.getPermissionChecker(FSDirectory.java:1668)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirectory.getPermissionChecker(FSDirectory.java:1658)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirStatAndListingOp.getListingInt(FSDirStatAndListingOp.java:51)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getListing(FSNamesystem.java:4486)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getListing(NameNodeRpcServer.java:999)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getListing(ClientNamenodeProtocolServerSideTranslatorPB.java:634)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:616)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:982)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2049)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2045)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1698)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2043)
+Caused by: java.io.FileNotFoundException: /Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+	at sun.misc.URLClassPath$JarLoader.getJarFile(URLClassPath.java:891)
+	at sun.misc.URLClassPath$JarLoader.access$700(URLClassPath.java:756)
+	at sun.misc.URLClassPath$JarLoader$1.run(URLClassPath.java:838)
+	at sun.misc.URLClassPath$JarLoader$1.run(URLClassPath.java:831)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.misc.URLClassPath$JarLoader.ensureOpen(URLClassPath.java:830)
+	at sun.misc.URLClassPath$JarLoader.getResource(URLClassPath.java:1001)
+	... 54 more
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1475)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1412)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:229)
+	at com.sun.proxy.$Proxy9.getListing(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getListing(ClientNamenodeProtocolTranslatorPB.java:573)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:191)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+	at com.sun.proxy.$Proxy10.getListing(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.listPaths(DFSClient.java:2086)
+	at org.apache.hadoop.fs.Hdfs$DirListingIterator.<init>(Hdfs.java:208)
+	at org.apache.hadoop.fs.Hdfs$DirListingIterator.<init>(Hdfs.java:195)
+	at org.apache.hadoop.fs.Hdfs$2.<init>(Hdfs.java:177)
+	at org.apache.hadoop.fs.Hdfs.listStatusIterator(Hdfs.java:177)
+	at org.apache.hadoop.fs.FileContext$22.next(FileContext.java:1494)
+	at org.apache.hadoop.fs.FileContext$22.next(FileContext.java:1489)
+	at org.apache.hadoop.fs.FSLinkResolver.resolve(FSLinkResolver.java:90)
+	at org.apache.hadoop.fs.FileContext.listStatus(FileContext.java:1489)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.listFilteredStatus(JobHistoryUtils.java:505)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:452)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:444)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:439)
+	at org.apache.hadoop.mapreduce.v2.hs.HistoryFileManager.scanIntermediateDirectory(HistoryFileManager.java:839)
+	at org.apache.hadoop.mapreduce.v2.hs.JobHistory$MoveIntermediateToDoneRunnable.run(JobHistory.java:189)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-01-22 18:04:03,707 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 18:04:03,715 ERROR org.apache.hadoop.mapreduce.v2.hs.JobHistory: Error while scanning intermediate done dir 
+org.apache.hadoop.ipc.RemoteException(java.lang.InternalError): java.io.FileNotFoundException: /Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+	at sun.misc.URLClassPath$JarLoader.getResource(URLClassPath.java:1003)
+	at sun.misc.URLClassPath.getResource(URLClassPath.java:212)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:365)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:411)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.util.ResourceBundle$RBClassLoader.loadClass(ResourceBundle.java:503)
+	at java.util.ResourceBundle$Control.newBundle(ResourceBundle.java:2640)
+	at java.util.ResourceBundle.loadBundle(ResourceBundle.java:1501)
+	at java.util.ResourceBundle.findBundle(ResourceBundle.java:1465)
+	at java.util.ResourceBundle.findBundle(ResourceBundle.java:1419)
+	at java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1361)
+	at java.util.ResourceBundle.getBundle(ResourceBundle.java:845)
+	at java.util.logging.Level.computeLocalizedLevelName(Level.java:265)
+	at java.util.logging.Level.getLocalizedLevelName(Level.java:324)
+	at java.util.logging.SimpleFormatter.format(SimpleFormatter.java:165)
+	at java.util.logging.StreamHandler.publish(StreamHandler.java:211)
+	at java.util.logging.ConsoleHandler.publish(ConsoleHandler.java:116)
+	at java.util.logging.Logger.log(Logger.java:738)
+	at java.util.logging.Logger.doLog(Logger.java:765)
+	at java.util.logging.Logger.log(Logger.java:876)
+	at com.google.common.cache.LocalCache$Segment$1.run(LocalCache.java:2366)
+	at com.google.common.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:253)
+	at com.google.common.util.concurrent.ExecutionList$RunnableExecutorPair.execute(ExecutionList.java:149)
+	at com.google.common.util.concurrent.ExecutionList.add(ExecutionList.java:105)
+	at com.google.common.util.concurrent.AbstractFuture.addListener(AbstractFuture.java:155)
+	at com.google.common.cache.LocalCache$Segment.loadAsync(LocalCache.java:2357)
+	at com.google.common.cache.LocalCache$Segment.refresh(LocalCache.java:2421)
+	at com.google.common.cache.LocalCache$Segment.scheduleRefresh(LocalCache.java:2399)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2218)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3965)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3969)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4829)
+	at org.apache.hadoop.security.Groups.getGroups(Groups.java:182)
+	at org.apache.hadoop.security.UserGroupInformation.getGroupNames(UserGroupInformation.java:1554)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.<init>(FSPermissionChecker.java:87)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirectory.getPermissionChecker(FSDirectory.java:1668)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirectory.getPermissionChecker(FSDirectory.java:1658)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirStatAndListingOp.getListingInt(FSDirStatAndListingOp.java:51)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getListing(FSNamesystem.java:4486)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getListing(NameNodeRpcServer.java:999)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getListing(ClientNamenodeProtocolServerSideTranslatorPB.java:634)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:616)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:982)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2049)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2045)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1698)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2043)
+Caused by: java.io.FileNotFoundException: /Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+	at sun.misc.URLClassPath$JarLoader.getJarFile(URLClassPath.java:891)
+	at sun.misc.URLClassPath$JarLoader.access$700(URLClassPath.java:756)
+	at sun.misc.URLClassPath$JarLoader$1.run(URLClassPath.java:838)
+	at sun.misc.URLClassPath$JarLoader$1.run(URLClassPath.java:831)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.misc.URLClassPath$JarLoader.ensureOpen(URLClassPath.java:830)
+	at sun.misc.URLClassPath$JarLoader.getResource(URLClassPath.java:1001)
+	... 54 more
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1475)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1412)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:229)
+	at com.sun.proxy.$Proxy9.getListing(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getListing(ClientNamenodeProtocolTranslatorPB.java:573)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:191)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+	at com.sun.proxy.$Proxy10.getListing(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.listPaths(DFSClient.java:2086)
+	at org.apache.hadoop.fs.Hdfs$DirListingIterator.<init>(Hdfs.java:208)
+	at org.apache.hadoop.fs.Hdfs$DirListingIterator.<init>(Hdfs.java:195)
+	at org.apache.hadoop.fs.Hdfs$2.<init>(Hdfs.java:177)
+	at org.apache.hadoop.fs.Hdfs.listStatusIterator(Hdfs.java:177)
+	at org.apache.hadoop.fs.FileContext$22.next(FileContext.java:1494)
+	at org.apache.hadoop.fs.FileContext$22.next(FileContext.java:1489)
+	at org.apache.hadoop.fs.FSLinkResolver.resolve(FSLinkResolver.java:90)
+	at org.apache.hadoop.fs.FileContext.listStatus(FileContext.java:1489)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.listFilteredStatus(JobHistoryUtils.java:505)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:452)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:444)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:439)
+	at org.apache.hadoop.mapreduce.v2.hs.HistoryFileManager.scanIntermediateDirectory(HistoryFileManager.java:839)
+	at org.apache.hadoop.mapreduce.v2.hs.JobHistory$MoveIntermediateToDoneRunnable.run(JobHistory.java:189)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-01-22 18:07:03,711 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 18:07:03,721 ERROR org.apache.hadoop.mapreduce.v2.hs.JobHistory: Error while scanning intermediate done dir 
+org.apache.hadoop.ipc.RemoteException(java.lang.InternalError): java.io.FileNotFoundException: /Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+	at sun.misc.URLClassPath$JarLoader.getResource(URLClassPath.java:1003)
+	at sun.misc.URLClassPath.getResource(URLClassPath.java:212)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:365)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:411)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.util.ResourceBundle$RBClassLoader.loadClass(ResourceBundle.java:503)
+	at java.util.ResourceBundle$Control.newBundle(ResourceBundle.java:2640)
+	at java.util.ResourceBundle.loadBundle(ResourceBundle.java:1501)
+	at java.util.ResourceBundle.findBundle(ResourceBundle.java:1465)
+	at java.util.ResourceBundle.findBundle(ResourceBundle.java:1419)
+	at java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1361)
+	at java.util.ResourceBundle.getBundle(ResourceBundle.java:845)
+	at java.util.logging.Level.computeLocalizedLevelName(Level.java:265)
+	at java.util.logging.Level.getLocalizedLevelName(Level.java:324)
+	at java.util.logging.SimpleFormatter.format(SimpleFormatter.java:165)
+	at java.util.logging.StreamHandler.publish(StreamHandler.java:211)
+	at java.util.logging.ConsoleHandler.publish(ConsoleHandler.java:116)
+	at java.util.logging.Logger.log(Logger.java:738)
+	at java.util.logging.Logger.doLog(Logger.java:765)
+	at java.util.logging.Logger.log(Logger.java:876)
+	at com.google.common.cache.LocalCache$Segment$1.run(LocalCache.java:2366)
+	at com.google.common.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:253)
+	at com.google.common.util.concurrent.ExecutionList$RunnableExecutorPair.execute(ExecutionList.java:149)
+	at com.google.common.util.concurrent.ExecutionList.add(ExecutionList.java:105)
+	at com.google.common.util.concurrent.AbstractFuture.addListener(AbstractFuture.java:155)
+	at com.google.common.cache.LocalCache$Segment.loadAsync(LocalCache.java:2357)
+	at com.google.common.cache.LocalCache$Segment.refresh(LocalCache.java:2421)
+	at com.google.common.cache.LocalCache$Segment.scheduleRefresh(LocalCache.java:2399)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2218)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3965)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3969)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4829)
+	at org.apache.hadoop.security.Groups.getGroups(Groups.java:182)
+	at org.apache.hadoop.security.UserGroupInformation.getGroupNames(UserGroupInformation.java:1554)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.<init>(FSPermissionChecker.java:87)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirectory.getPermissionChecker(FSDirectory.java:1668)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirectory.getPermissionChecker(FSDirectory.java:1658)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirStatAndListingOp.getListingInt(FSDirStatAndListingOp.java:51)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getListing(FSNamesystem.java:4486)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getListing(NameNodeRpcServer.java:999)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getListing(ClientNamenodeProtocolServerSideTranslatorPB.java:634)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:616)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:982)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2049)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2045)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1698)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2043)
+Caused by: java.io.FileNotFoundException: /Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+	at sun.misc.URLClassPath$JarLoader.getJarFile(URLClassPath.java:891)
+	at sun.misc.URLClassPath$JarLoader.access$700(URLClassPath.java:756)
+	at sun.misc.URLClassPath$JarLoader$1.run(URLClassPath.java:838)
+	at sun.misc.URLClassPath$JarLoader$1.run(URLClassPath.java:831)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.misc.URLClassPath$JarLoader.ensureOpen(URLClassPath.java:830)
+	at sun.misc.URLClassPath$JarLoader.getResource(URLClassPath.java:1001)
+	... 54 more
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1475)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1412)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:229)
+	at com.sun.proxy.$Proxy9.getListing(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getListing(ClientNamenodeProtocolTranslatorPB.java:573)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:191)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+	at com.sun.proxy.$Proxy10.getListing(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.listPaths(DFSClient.java:2086)
+	at org.apache.hadoop.fs.Hdfs$DirListingIterator.<init>(Hdfs.java:208)
+	at org.apache.hadoop.fs.Hdfs$DirListingIterator.<init>(Hdfs.java:195)
+	at org.apache.hadoop.fs.Hdfs$2.<init>(Hdfs.java:177)
+	at org.apache.hadoop.fs.Hdfs.listStatusIterator(Hdfs.java:177)
+	at org.apache.hadoop.fs.FileContext$22.next(FileContext.java:1494)
+	at org.apache.hadoop.fs.FileContext$22.next(FileContext.java:1489)
+	at org.apache.hadoop.fs.FSLinkResolver.resolve(FSLinkResolver.java:90)
+	at org.apache.hadoop.fs.FileContext.listStatus(FileContext.java:1489)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.listFilteredStatus(JobHistoryUtils.java:505)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:452)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:444)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:439)
+	at org.apache.hadoop.mapreduce.v2.hs.HistoryFileManager.scanIntermediateDirectory(HistoryFileManager.java:839)
+	at org.apache.hadoop.mapreduce.v2.hs.JobHistory$MoveIntermediateToDoneRunnable.run(JobHistory.java:189)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-01-22 18:10:03,713 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 18:10:03,723 ERROR org.apache.hadoop.mapreduce.v2.hs.JobHistory: Error while scanning intermediate done dir 
+org.apache.hadoop.ipc.RemoteException(java.lang.InternalError): java.io.FileNotFoundException: /Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+	at sun.misc.URLClassPath$JarLoader.getResource(URLClassPath.java:1003)
+	at sun.misc.URLClassPath.getResource(URLClassPath.java:212)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:365)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:411)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.util.ResourceBundle$RBClassLoader.loadClass(ResourceBundle.java:503)
+	at java.util.ResourceBundle$Control.newBundle(ResourceBundle.java:2640)
+	at java.util.ResourceBundle.loadBundle(ResourceBundle.java:1501)
+	at java.util.ResourceBundle.findBundle(ResourceBundle.java:1465)
+	at java.util.ResourceBundle.findBundle(ResourceBundle.java:1419)
+	at java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1361)
+	at java.util.ResourceBundle.getBundle(ResourceBundle.java:845)
+	at java.util.logging.Level.computeLocalizedLevelName(Level.java:265)
+	at java.util.logging.Level.getLocalizedLevelName(Level.java:324)
+	at java.util.logging.SimpleFormatter.format(SimpleFormatter.java:165)
+	at java.util.logging.StreamHandler.publish(StreamHandler.java:211)
+	at java.util.logging.ConsoleHandler.publish(ConsoleHandler.java:116)
+	at java.util.logging.Logger.log(Logger.java:738)
+	at java.util.logging.Logger.doLog(Logger.java:765)
+	at java.util.logging.Logger.log(Logger.java:876)
+	at com.google.common.cache.LocalCache$Segment$1.run(LocalCache.java:2366)
+	at com.google.common.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:253)
+	at com.google.common.util.concurrent.ExecutionList$RunnableExecutorPair.execute(ExecutionList.java:149)
+	at com.google.common.util.concurrent.ExecutionList.add(ExecutionList.java:105)
+	at com.google.common.util.concurrent.AbstractFuture.addListener(AbstractFuture.java:155)
+	at com.google.common.cache.LocalCache$Segment.loadAsync(LocalCache.java:2357)
+	at com.google.common.cache.LocalCache$Segment.refresh(LocalCache.java:2421)
+	at com.google.common.cache.LocalCache$Segment.scheduleRefresh(LocalCache.java:2399)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2218)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3965)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3969)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4829)
+	at org.apache.hadoop.security.Groups.getGroups(Groups.java:182)
+	at org.apache.hadoop.security.UserGroupInformation.getGroupNames(UserGroupInformation.java:1554)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.<init>(FSPermissionChecker.java:87)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirectory.getPermissionChecker(FSDirectory.java:1668)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirectory.getPermissionChecker(FSDirectory.java:1658)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirStatAndListingOp.getListingInt(FSDirStatAndListingOp.java:51)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getListing(FSNamesystem.java:4486)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getListing(NameNodeRpcServer.java:999)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getListing(ClientNamenodeProtocolServerSideTranslatorPB.java:634)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:616)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:982)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2049)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2045)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1698)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2043)
+Caused by: java.io.FileNotFoundException: /Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+	at sun.misc.URLClassPath$JarLoader.getJarFile(URLClassPath.java:891)
+	at sun.misc.URLClassPath$JarLoader.access$700(URLClassPath.java:756)
+	at sun.misc.URLClassPath$JarLoader$1.run(URLClassPath.java:838)
+	at sun.misc.URLClassPath$JarLoader$1.run(URLClassPath.java:831)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.misc.URLClassPath$JarLoader.ensureOpen(URLClassPath.java:830)
+	at sun.misc.URLClassPath$JarLoader.getResource(URLClassPath.java:1001)
+	... 54 more
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1475)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1412)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:229)
+	at com.sun.proxy.$Proxy9.getListing(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getListing(ClientNamenodeProtocolTranslatorPB.java:573)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:191)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+	at com.sun.proxy.$Proxy10.getListing(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.listPaths(DFSClient.java:2086)
+	at org.apache.hadoop.fs.Hdfs$DirListingIterator.<init>(Hdfs.java:208)
+	at org.apache.hadoop.fs.Hdfs$DirListingIterator.<init>(Hdfs.java:195)
+	at org.apache.hadoop.fs.Hdfs$2.<init>(Hdfs.java:177)
+	at org.apache.hadoop.fs.Hdfs.listStatusIterator(Hdfs.java:177)
+	at org.apache.hadoop.fs.FileContext$22.next(FileContext.java:1494)
+	at org.apache.hadoop.fs.FileContext$22.next(FileContext.java:1489)
+	at org.apache.hadoop.fs.FSLinkResolver.resolve(FSLinkResolver.java:90)
+	at org.apache.hadoop.fs.FileContext.listStatus(FileContext.java:1489)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.listFilteredStatus(JobHistoryUtils.java:505)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:452)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:444)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:439)
+	at org.apache.hadoop.mapreduce.v2.hs.HistoryFileManager.scanIntermediateDirectory(HistoryFileManager.java:839)
+	at org.apache.hadoop.mapreduce.v2.hs.JobHistory$MoveIntermediateToDoneRunnable.run(JobHistory.java:189)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-01-22 18:13:03,712 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 18:13:03,723 ERROR org.apache.hadoop.mapreduce.v2.hs.JobHistory: Error while scanning intermediate done dir 
+org.apache.hadoop.ipc.RemoteException(java.lang.InternalError): java.io.FileNotFoundException: /Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+	at sun.misc.URLClassPath$JarLoader.getResource(URLClassPath.java:1003)
+	at sun.misc.URLClassPath.getResource(URLClassPath.java:212)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:365)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:362)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:361)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:411)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:331)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.util.ResourceBundle$RBClassLoader.loadClass(ResourceBundle.java:503)
+	at java.util.ResourceBundle$Control.newBundle(ResourceBundle.java:2640)
+	at java.util.ResourceBundle.loadBundle(ResourceBundle.java:1501)
+	at java.util.ResourceBundle.findBundle(ResourceBundle.java:1465)
+	at java.util.ResourceBundle.findBundle(ResourceBundle.java:1419)
+	at java.util.ResourceBundle.getBundleImpl(ResourceBundle.java:1361)
+	at java.util.ResourceBundle.getBundle(ResourceBundle.java:845)
+	at java.util.logging.Level.computeLocalizedLevelName(Level.java:265)
+	at java.util.logging.Level.getLocalizedLevelName(Level.java:324)
+	at java.util.logging.SimpleFormatter.format(SimpleFormatter.java:165)
+	at java.util.logging.StreamHandler.publish(StreamHandler.java:211)
+	at java.util.logging.ConsoleHandler.publish(ConsoleHandler.java:116)
+	at java.util.logging.Logger.log(Logger.java:738)
+	at java.util.logging.Logger.doLog(Logger.java:765)
+	at java.util.logging.Logger.log(Logger.java:876)
+	at com.google.common.cache.LocalCache$Segment$1.run(LocalCache.java:2366)
+	at com.google.common.util.concurrent.MoreExecutors$SameThreadExecutorService.execute(MoreExecutors.java:253)
+	at com.google.common.util.concurrent.ExecutionList$RunnableExecutorPair.execute(ExecutionList.java:149)
+	at com.google.common.util.concurrent.ExecutionList.add(ExecutionList.java:105)
+	at com.google.common.util.concurrent.AbstractFuture.addListener(AbstractFuture.java:155)
+	at com.google.common.cache.LocalCache$Segment.loadAsync(LocalCache.java:2357)
+	at com.google.common.cache.LocalCache$Segment.refresh(LocalCache.java:2421)
+	at com.google.common.cache.LocalCache$Segment.scheduleRefresh(LocalCache.java:2399)
+	at com.google.common.cache.LocalCache$Segment.get(LocalCache.java:2218)
+	at com.google.common.cache.LocalCache.get(LocalCache.java:3965)
+	at com.google.common.cache.LocalCache.getOrLoad(LocalCache.java:3969)
+	at com.google.common.cache.LocalCache$LocalManualCache.get(LocalCache.java:4829)
+	at org.apache.hadoop.security.Groups.getGroups(Groups.java:182)
+	at org.apache.hadoop.security.UserGroupInformation.getGroupNames(UserGroupInformation.java:1554)
+	at org.apache.hadoop.hdfs.server.namenode.FSPermissionChecker.<init>(FSPermissionChecker.java:87)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirectory.getPermissionChecker(FSDirectory.java:1668)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirectory.getPermissionChecker(FSDirectory.java:1658)
+	at org.apache.hadoop.hdfs.server.namenode.FSDirStatAndListingOp.getListingInt(FSDirStatAndListingOp.java:51)
+	at org.apache.hadoop.hdfs.server.namenode.FSNamesystem.getListing(FSNamesystem.java:4486)
+	at org.apache.hadoop.hdfs.server.namenode.NameNodeRpcServer.getListing(NameNodeRpcServer.java:999)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolServerSideTranslatorPB.getListing(ClientNamenodeProtocolServerSideTranslatorPB.java:634)
+	at org.apache.hadoop.hdfs.protocol.proto.ClientNamenodeProtocolProtos$ClientNamenodeProtocol$2.callBlockingMethod(ClientNamenodeProtocolProtos.java)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker.call(ProtobufRpcEngine.java:616)
+	at org.apache.hadoop.ipc.RPC$Server.call(RPC.java:982)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2049)
+	at org.apache.hadoop.ipc.Server$Handler$1.run(Server.java:2045)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Subject.java:422)
+	at org.apache.hadoop.security.UserGroupInformation.doAs(UserGroupInformation.java:1698)
+	at org.apache.hadoop.ipc.Server$Handler.run(Server.java:2043)
+Caused by: java.io.FileNotFoundException: /Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/jre/lib/ext/cldrdata.jar
+	at sun.misc.URLClassPath$JarLoader.getJarFile(URLClassPath.java:891)
+	at sun.misc.URLClassPath$JarLoader.access$700(URLClassPath.java:756)
+	at sun.misc.URLClassPath$JarLoader$1.run(URLClassPath.java:838)
+	at sun.misc.URLClassPath$JarLoader$1.run(URLClassPath.java:831)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.misc.URLClassPath$JarLoader.ensureOpen(URLClassPath.java:830)
+	at sun.misc.URLClassPath$JarLoader.getResource(URLClassPath.java:1001)
+	... 54 more
+
+	at org.apache.hadoop.ipc.Client.call(Client.java:1475)
+	at org.apache.hadoop.ipc.Client.call(Client.java:1412)
+	at org.apache.hadoop.ipc.ProtobufRpcEngine$Invoker.invoke(ProtobufRpcEngine.java:229)
+	at com.sun.proxy.$Proxy9.getListing(Unknown Source)
+	at org.apache.hadoop.hdfs.protocolPB.ClientNamenodeProtocolTranslatorPB.getListing(ClientNamenodeProtocolTranslatorPB.java:573)
+	at sun.reflect.GeneratedMethodAccessor11.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invokeMethod(RetryInvocationHandler.java:191)
+	at org.apache.hadoop.io.retry.RetryInvocationHandler.invoke(RetryInvocationHandler.java:102)
+	at com.sun.proxy.$Proxy10.getListing(Unknown Source)
+	at org.apache.hadoop.hdfs.DFSClient.listPaths(DFSClient.java:2086)
+	at org.apache.hadoop.fs.Hdfs$DirListingIterator.<init>(Hdfs.java:208)
+	at org.apache.hadoop.fs.Hdfs$DirListingIterator.<init>(Hdfs.java:195)
+	at org.apache.hadoop.fs.Hdfs$2.<init>(Hdfs.java:177)
+	at org.apache.hadoop.fs.Hdfs.listStatusIterator(Hdfs.java:177)
+	at org.apache.hadoop.fs.FileContext$22.next(FileContext.java:1494)
+	at org.apache.hadoop.fs.FileContext$22.next(FileContext.java:1489)
+	at org.apache.hadoop.fs.FSLinkResolver.resolve(FSLinkResolver.java:90)
+	at org.apache.hadoop.fs.FileContext.listStatus(FileContext.java:1489)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.listFilteredStatus(JobHistoryUtils.java:505)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:452)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:444)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:439)
+	at org.apache.hadoop.mapreduce.v2.hs.HistoryFileManager.scanIntermediateDirectory(HistoryFileManager.java:839)
+	at org.apache.hadoop.mapreduce.v2.hs.JobHistory$MoveIntermediateToDoneRunnable.run(JobHistory.java:189)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2017-01-22 18:15:41,550 ERROR org.apache.hadoop.mapreduce.v2.hs.JobHistoryServer: RECEIVED SIGNAL 15: SIGTERM
+2017-01-22 18:15:41,553 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Stopping JobHistoryServer metrics system...
+2017-01-22 18:15:41,554 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: JobHistoryServer metrics system stopped.
+2017-01-22 18:15:41,555 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: JobHistoryServer metrics system shutdown complete.
+2017-01-22 18:15:41,555 INFO org.apache.hadoop.ipc.Server: Stopping server on 10033
+2017-01-22 18:15:41,557 INFO org.apache.hadoop.ipc.Server: Stopping IPC Server listener on 10033
+2017-01-22 18:15:41,557 INFO org.apache.hadoop.ipc.Server: Stopping IPC Server Responder
+2017-01-22 18:15:41,558 INFO org.apache.hadoop.ipc.Server: Stopping server on 10020
+2017-01-22 18:15:41,559 INFO org.apache.hadoop.ipc.Server: Stopping IPC Server listener on 10020
+2017-01-22 18:15:41,561 INFO org.apache.hadoop.ipc.Server: Stopping IPC Server Responder
+2017-01-22 18:15:41,564 INFO org.mortbay.log: Stopped HttpServer2$SelectChannelConnectorWithSafeStartup@0.0.0.0:19888
+2017-01-22 18:15:41,565 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Stopping JobHistory
+2017-01-22 18:15:41,565 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Stopping History Cleaner/Move To Done
+2017-01-22 18:15:41,566 ERROR org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: ExpiredTokenRemover received java.lang.InterruptedException: sleep interrupted
+2017-01-22 18:15:41,566 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistoryServer: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down JobHistoryServer at 27-41.priv23.nus.edu.sg/172.23.27.41
+************************************************************/
+2017-01-22 18:20:37,366 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistoryServer: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting JobHistoryServer
+STARTUP_MSG:   host = 27-41.priv23.nus.edu.sg/172.23.27.41
+STARTUP_MSG:   args = []
+STARTUP_MSG:   version = 2.7.3
+STARTUP_MSG:   classpath = /usr/local/hadoop-2.7.3/etc/hadoop:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/activation-1.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/apacheds-i18n-2.0.0-M15.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/apacheds-kerberos-codec-2.0.0-M15.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/api-asn1-api-1.0.0-M20.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/api-util-1.0.0-M20.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/asm-3.2.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/avro-1.7.4.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/commons-beanutils-1.7.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/commons-beanutils-core-1.8.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/commons-cli-1.2.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/commons-codec-1.4.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/commons-collections-3.2.2.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/commons-compress-1.4.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/commons-configuration-1.6.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/commons-digester-1.8.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/commons-httpclient-3.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/commons-io-2.4.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/commons-lang-2.6.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/commons-logging-1.1.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/commons-math3-3.1.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/commons-net-3.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/curator-client-2.7.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/curator-framework-2.7.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/curator-recipes-2.7.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/gson-2.2.4.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/guava-11.0.2.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/hadoop-annotations-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/hadoop-auth-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/hamcrest-core-1.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/htrace-core-3.1.0-incubating.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/httpclient-4.2.5.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/httpcore-4.2.5.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/java-xmlbuilder-0.4.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/jaxb-api-2.2.2.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/jersey-core-1.9.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/jersey-json-1.9.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/jersey-server-1.9.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/jets3t-0.9.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/jettison-1.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/jetty-6.1.26.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/jetty-util-6.1.26.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/jsch-0.1.42.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/jsp-api-2.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/jsr305-3.0.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/junit-4.11.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/log4j-1.2.17.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/mockito-all-1.8.5.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/netty-3.6.2.Final.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/paranamer-2.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/servlet-api-2.5.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/slf4j-api-1.7.10.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/snappy-java-1.0.4.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/stax-api-1.0-2.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/xmlenc-0.52.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/xz-1.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/lib/zookeeper-3.4.6.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/hadoop-common-2.7.3-tests.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/hadoop-common-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/common/hadoop-nfs-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/asm-3.2.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/commons-codec-1.4.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/commons-io-2.4.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/commons-lang-2.6.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/guava-11.0.2.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/htrace-core-3.1.0-incubating.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/jersey-core-1.9.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/jersey-server-1.9.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/jetty-6.1.26.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/jetty-util-6.1.26.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/jsr305-3.0.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/netty-3.6.2.Final.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/netty-all-4.0.23.Final.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/servlet-api-2.5.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/xercesImpl-2.9.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/xml-apis-1.3.04.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/lib/xmlenc-0.52.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/hadoop-hdfs-2.7.3-tests.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/hadoop-hdfs-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/hdfs/hadoop-hdfs-nfs-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/activation-1.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/aopalliance-1.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/asm-3.2.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/commons-cli-1.2.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/commons-codec-1.4.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/commons-collections-3.2.2.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/commons-compress-1.4.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/commons-io-2.4.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/commons-lang-2.6.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/commons-logging-1.1.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/guava-11.0.2.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/guice-3.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/guice-servlet-3.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/jackson-jaxrs-1.9.13.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/jackson-xc-1.9.13.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/javax.inject-1.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/jaxb-api-2.2.2.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/jaxb-impl-2.2.3-1.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/jersey-client-1.9.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/jersey-core-1.9.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/jersey-guice-1.9.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/jersey-json-1.9.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/jersey-server-1.9.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/jettison-1.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/jetty-6.1.26.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/jetty-util-6.1.26.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/jsr305-3.0.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/leveldbjni-all-1.8.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/log4j-1.2.17.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/netty-3.6.2.Final.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/servlet-api-2.5.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/stax-api-1.0-2.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/xz-1.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/zookeeper-3.4.6-tests.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/lib/zookeeper-3.4.6.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-api-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-client-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-common-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-registry-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-server-common-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-server-nodemanager-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-server-tests-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-server-web-proxy-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/aopalliance-1.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/asm-3.2.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/avro-1.7.4.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/commons-compress-1.4.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/commons-io-2.4.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/guice-3.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/guice-servlet-3.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/hadoop-annotations-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/javax.inject-1.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/jersey-core-1.9.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/jersey-guice-1.9.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/jersey-server-1.9.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/junit-4.11.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/leveldbjni-all-1.8.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/log4j-1.2.17.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/netty-3.6.2.Final.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/paranamer-2.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/snappy-java-1.0.4.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/xz-1.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-client-app-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.3-tests.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.3.jar:/contrib/capacity-scheduler/*.jar:/contrib/capacity-scheduler/*.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-client-app-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.3-tests.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-api-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-client-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-common-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-registry-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-server-common-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-server-nodemanager-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-server-tests-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-server-web-proxy-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/aopalliance-1.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/asm-3.2.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/avro-1.7.4.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/commons-compress-1.4.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/commons-io-2.4.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/guice-3.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/guice-servlet-3.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/hadoop-annotations-2.7.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/javax.inject-1.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/jersey-core-1.9.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/jersey-guice-1.9.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/jersey-server-1.9.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/junit-4.11.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/leveldbjni-all-1.8.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/log4j-1.2.17.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/netty-3.6.2.Final.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/paranamer-2.3.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/snappy-java-1.0.4.1.jar:/usr/local/hadoop-2.7.3/share/hadoop/mapreduce/lib/xz-1.0.jar:/usr/local/hadoop-2.7.3/modules/*.jar
+STARTUP_MSG:   build = https://git-wip-us.apache.org/repos/asf/hadoop.git -r baa91f7c6bc9cb92be5982de4719c1c8af91ccff; compiled by 'root' on 2016-08-18T01:41Z
+STARTUP_MSG:   java = 1.7.0_80
+************************************************************/
+2017-01-22 18:20:37,375 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistoryServer: registered UNIX signal handlers for [TERM, HUP, INT]
+2017-01-22 18:20:38,041 WARN org.apache.hadoop.util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2017-01-22 18:20:38,328 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: JobHistory Init
+2017-01-22 18:20:38,871 INFO org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system [hdfs://localhost:8020]
+2017-01-22 18:20:39,016 INFO org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils: Default file system [hdfs://localhost:8020]
+2017-01-22 18:20:49,032 INFO org.apache.hadoop.mapreduce.v2.hs.HistoryFileManager: Initializing Existing Jobs...
+2017-01-22 18:20:49,044 INFO org.apache.hadoop.mapreduce.v2.hs.CachedHistoryStorage: CachedHistoryStorage Init
+2017-01-22 18:20:49,064 INFO org.apache.hadoop.ipc.CallQueueManager: Using callQueue class java.util.concurrent.LinkedBlockingQueue
+2017-01-22 18:20:49,071 INFO org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 10033
+2017-01-22 18:20:49,113 INFO org.apache.hadoop.metrics2.impl.MetricsConfig: loaded properties from hadoop-metrics2.properties
+2017-01-22 18:20:49,160 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: Scheduled snapshot period at 10 second(s).
+2017-01-22 18:20:49,160 INFO org.apache.hadoop.metrics2.impl.MetricsSystemImpl: JobHistoryServer metrics system started
+2017-01-22 18:20:49,168 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-01-22 18:20:49,169 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Starting expired delegation token remover thread, tokenRemoverScanInterval=60 min(s)
+2017-01-22 18:20:49,170 INFO org.apache.hadoop.security.token.delegation.AbstractDelegationTokenSecretManager: Updating the current master key for generating delegation tokens
+2017-01-22 18:20:49,261 INFO org.mortbay.log: Logging to org.slf4j.impl.Log4jLoggerAdapter(org.mortbay.log) via org.mortbay.log.Slf4jLog
+2017-01-22 18:20:49,270 INFO org.apache.hadoop.security.authentication.server.AuthenticationFilter: Unable to initialize FileSignerSecretProvider, falling back to use random secrets.
+2017-01-22 18:20:49,274 INFO org.apache.hadoop.http.HttpRequestLog: Http request log for http.requests.jobhistory is not defined
+2017-01-22 18:20:49,280 INFO org.apache.hadoop.http.HttpServer2: Added global filter 'safety' (class=org.apache.hadoop.http.HttpServer2$QuotingInputFilter)
+2017-01-22 18:20:49,282 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context jobhistory
+2017-01-22 18:20:49,282 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context static
+2017-01-22 18:20:49,282 INFO org.apache.hadoop.http.HttpServer2: Added filter static_user_filter (class=org.apache.hadoop.http.lib.StaticUserWebFilter$StaticUserFilter) to context logs
+2017-01-22 18:20:49,285 INFO org.apache.hadoop.http.HttpServer2: adding path spec: /jobhistory/*
+2017-01-22 18:20:49,285 INFO org.apache.hadoop.http.HttpServer2: adding path spec: /ws/*
+2017-01-22 18:20:49,559 INFO org.apache.hadoop.yarn.webapp.WebApps: Registered webapp guice modules
+2017-01-22 18:20:49,560 INFO org.apache.hadoop.http.HttpServer2: Jetty bound to port 19888
+2017-01-22 18:20:49,560 INFO org.mortbay.log: jetty-6.1.26
+2017-01-22 18:20:49,581 INFO org.mortbay.log: Extract jar:file:/usr/local/hadoop-2.7.3/share/hadoop/yarn/hadoop-yarn-common-2.7.3.jar!/webapps/jobhistory to /var/folders/vr/rg44m3fx30d5pmj3442nllwc0000gn/T/Jetty_0_0_0_0_19888_jobhistory____.djq1tw/webapp
+2017-01-22 18:20:50,491 INFO org.mortbay.log: Started HttpServer2$SelectChannelConnectorWithSafeStartup@0.0.0.0:19888
+2017-01-22 18:20:50,492 INFO org.apache.hadoop.yarn.webapp.WebApps: Web app jobhistory started at 19888
+2017-01-22 18:20:50,501 INFO org.apache.hadoop.ipc.CallQueueManager: Using callQueue class java.util.concurrent.LinkedBlockingQueue
+2017-01-22 18:20:50,505 INFO org.apache.hadoop.ipc.Server: Starting Socket Reader #1 for port 10020
+2017-01-22 18:20:50,510 INFO org.apache.hadoop.yarn.factories.impl.pb.RpcServerFactoryPBImpl: Adding protocol org.apache.hadoop.mapreduce.v2.api.HSClientProtocolPB to the server
+2017-01-22 18:20:50,511 INFO org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2017-01-22 18:20:50,511 INFO org.apache.hadoop.ipc.Server: IPC Server listener on 10020: starting
+2017-01-22 18:20:50,514 INFO org.apache.hadoop.mapreduce.v2.hs.HistoryClientService: Instantiated HistoryClientService at 27-41.priv23.nus.edu.sg/172.23.27.41:10020
+2017-01-22 18:20:50,516 INFO org.apache.hadoop.ipc.Server: IPC Server Responder: starting
+2017-01-22 18:20:50,516 INFO org.apache.hadoop.ipc.Server: IPC Server listener on 10033: starting
+2017-01-22 18:21:19,173 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: History Cleaner started
+2017-01-22 18:21:19,180 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: History Cleaner complete
+2017-01-22 18:23:49,173 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 18:44:07,777 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 18:44:07,795 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 18:44:07,802 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 18:44:07,808 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 18:44:07,814 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 18:44:07,820 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 18:44:49,177 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:05:32,289 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:05:32,410 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:05:32,417 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:05:32,423 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:05:32,431 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:05:32,437 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:05:49,172 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:36:25,417 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:36:25,441 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:36:25,442 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:36:25,443 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:36:25,444 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:36:25,445 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:36:25,446 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:36:25,447 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:36:25,448 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:36:25,448 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:44:54,617 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:44:54,626 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:44:54,629 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:47:50,048 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:50:49,175 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:53:49,172 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:56:49,181 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 19:59:49,177 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:02:49,181 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:05:49,173 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:08:49,181 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:11:49,178 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:14:49,177 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:17:49,172 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:20:49,179 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:23:49,175 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:26:49,174 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:29:49,179 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:32:49,174 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:35:49,172 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:38:49,178 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:41:49,180 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:44:49,181 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:47:49,179 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:50:49,180 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:53:49,179 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:56:49,174 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 20:59:49,180 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:02:49,172 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:05:49,177 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:08:49,177 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:11:49,178 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:14:49,180 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:17:49,172 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:20:49,179 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:23:49,179 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:26:49,179 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:29:49,174 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:32:49,174 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:35:49,176 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:38:49,176 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:41:49,176 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:44:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:47:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:50:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:53:49,175 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:56:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 21:59:49,173 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:02:49,174 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:05:49,172 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:08:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:11:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:14:49,173 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:17:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:20:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:23:49,174 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:26:49,174 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:29:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:32:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:35:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:38:49,174 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:41:49,172 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:44:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:47:49,173 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:50:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:53:49,174 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:56:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 22:59:49,170 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 23:02:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 23:05:49,170 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 23:08:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 23:11:49,170 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 23:14:49,172 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 23:17:49,173 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 23:20:49,174 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 23:23:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 23:26:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 23:29:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 23:32:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 23:35:49,171 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 23:38:49,173 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 23:41:49,172 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
