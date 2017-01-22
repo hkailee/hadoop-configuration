@@ -57,3 +57,7 @@ STARTUP_MSG:   java = 1.8.0_112
 2017-01-22 17:28:16,478 INFO org.apache.hadoop.yarn.webapp.View: Getting list of all Jobs.
 2017-01-22 17:31:03,692 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
 2017-01-22 17:34:03,689 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 17:37:03,690 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 17:40:03,695 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 17:43:03,692 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-22 17:46:03,694 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files

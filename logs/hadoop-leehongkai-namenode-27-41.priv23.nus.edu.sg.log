@@ -136,3 +136,13 @@ No GCs detected
 2017-01-22 17:27:14,333 INFO org.apache.hadoop.hdfs.server.namenode.top.window.RollingWindowManager: topN size for command listStatus is: 1
 2017-01-22 17:27:14,333 INFO org.apache.hadoop.hdfs.server.namenode.top.window.RollingWindowManager: topN size for command * is: 1
 2017-01-22 17:27:14,333 INFO org.apache.hadoop.hdfs.server.namenode.top.window.RollingWindowManager: topN size for command setPermission is: 1
+2017-01-22 17:45:59,403 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 127.0.0.1
+2017-01-22 17:45:59,403 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Rolling edit logs
+2017-01-22 17:45:59,403 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Ending log segment 1
+2017-01-22 17:45:59,404 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 11 Total time for transactions(ms): 11 Number of transactions batched in Syncs: 0 Number of syncs: 6 SyncTimes(ms): 6 
+2017-01-22 17:45:59,405 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 11 Total time for transactions(ms): 11 Number of transactions batched in Syncs: 0 Number of syncs: 7 SyncTimes(ms): 8 
+2017-01-22 17:45:59,408 INFO org.apache.hadoop.hdfs.server.namenode.FileJournalManager: Finalizing edits file /tmp/hadoop-leehongkai/dfs/name/current/edits_inprogress_0000000000000000001 -> /tmp/hadoop-leehongkai/dfs/name/current/edits_0000000000000000001-0000000000000000011
+2017-01-22 17:45:59,410 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Starting log segment at 12
+2017-01-22 17:46:00,011 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Transfer took 0.00s at 0.00 KB/s
+2017-01-22 17:46:00,012 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Downloaded file fsimage.ckpt_0000000000000000011 size 886 bytes.
+2017-01-22 17:46:00,014 INFO org.apache.hadoop.hdfs.server.namenode.NNStorageRetentionManager: Going to retain 2 images with txid >= 0
