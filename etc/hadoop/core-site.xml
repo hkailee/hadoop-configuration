@@ -21,4 +21,8 @@
     <name>fs.defaultFS</name>
     <value>hdfs://localhost/</value> 
   </property>
+  <property>
+    <name>hadoop.tmp.dir</name>
+    <value>/usr/local/hadoop-2.7.3/tmp</value>
+  </property>
 </configuration>

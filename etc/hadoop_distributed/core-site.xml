@@ -21,4 +21,8 @@
     <name>fs.defaultFS</name>
     <value>hdfs://namenode/</value> 
   </property>
+  <property>
+    <name>io.file.buffer.size</name>
+    <value>128</value>
+  </property>
 </configuration>
