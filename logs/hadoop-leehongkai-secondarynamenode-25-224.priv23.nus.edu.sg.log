@@ -1695,3 +1695,24 @@ STARTUP_MSG:   java = 1.7.0_80
 2017-01-23 12:30:31,406 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Web server init done
 2017-01-23 12:30:31,407 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint Period   :3600 secs (60 min)
 2017-01-23 12:30:31,407 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Log Size Trigger    :1000000 txns
+2017-01-23 12:31:31,647 INFO org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Image has changed. Downloading updated image from NN.
+2017-01-23 12:31:31,822 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://localhost:50070/imagetransfer?getimage=1&txid=0&storageInfo=-63:886981136:0:CID-0b3223d9-8a56-4091-bd4d-628b98b7ff3e
+2017-01-23 12:31:31,851 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Image Transfer timeout configured to 60000 milliseconds
+2017-01-23 12:31:32,094 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Transfer took 0.03s at 0.00 KB/s
+2017-01-23 12:31:32,094 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Downloaded file fsimage.ckpt_0000000000000000000 size 357 bytes.
+2017-01-23 12:31:32,099 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Opening connection to http://localhost:50070/imagetransfer?getedit=1&startTxId=1&endTxId=2&storageInfo=-63:886981136:0:CID-0b3223d9-8a56-4091-bd4d-628b98b7ff3e
+2017-01-23 12:31:32,102 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Transfer took 0.00s at 0.00 KB/s
+2017-01-23 12:31:32,102 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Downloaded file edits_tmp_0000000000000000001-0000000000000000002_0000001485145892099 size 0 bytes.
+2017-01-23 12:31:32,132 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatPBINode: Loading 1 INodes.
+2017-01-23 12:31:32,159 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf: Loaded FSImage in 0 seconds.
+2017-01-23 12:31:32,159 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Loaded image for txid 0 from /usr/local/hadoop-2.7.3/tmp/dfs/namesecondary/current/fsimage_0000000000000000000
+2017-01-23 12:31:32,159 INFO org.apache.hadoop.hdfs.server.namenode.NameCache: initialized with 0 entries 0 lookups
+2017-01-23 12:31:32,163 INFO org.apache.hadoop.hdfs.server.namenode.Checkpointer: Checkpointer about to load edits from 1 stream(s).
+2017-01-23 12:31:32,167 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Reading /usr/local/hadoop-2.7.3/tmp/dfs/namesecondary/current/edits_0000000000000000001-0000000000000000002 expecting start txid #1
+2017-01-23 12:31:32,167 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Start loading edits file /usr/local/hadoop-2.7.3/tmp/dfs/namesecondary/current/edits_0000000000000000001-0000000000000000002
+2017-01-23 12:31:32,178 INFO org.apache.hadoop.hdfs.server.namenode.FSImage: Edits file /usr/local/hadoop-2.7.3/tmp/dfs/namesecondary/current/edits_0000000000000000001-0000000000000000002 of size 42 edits # 2 loaded in 0 seconds
+2017-01-23 12:31:32,184 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf: Saving image file /usr/local/hadoop-2.7.3/tmp/dfs/namesecondary/current/fsimage.ckpt_0000000000000000002 using no compression
+2017-01-23 12:31:32,206 INFO org.apache.hadoop.hdfs.server.namenode.FSImageFormatProtobuf: Image file /usr/local/hadoop-2.7.3/tmp/dfs/namesecondary/current/fsimage.ckpt_0000000000000000002 of size 357 bytes saved in 0 seconds.
+2017-01-23 12:31:32,208 INFO org.apache.hadoop.hdfs.server.namenode.FSImageTransactionalStorageInspector: No version file in /usr/local/hadoop-2.7.3/tmp/dfs/namesecondary
+2017-01-23 12:31:32,237 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Uploaded image with txid 2 to namenode at http://localhost:50070 in 0.024 seconds
+2017-01-23 12:31:32,237 WARN org.apache.hadoop.hdfs.server.namenode.SecondaryNameNode: Checkpoint done. New Image Size: 357

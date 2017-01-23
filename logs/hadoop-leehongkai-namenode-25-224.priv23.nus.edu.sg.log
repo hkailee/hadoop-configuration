@@ -1045,3 +1045,13 @@ STARTUP_MSG:   java = 1.7.0_80
 2017-01-23 12:30:22,380 INFO org.apache.hadoop.hdfs.server.namenode.NameNode: NameNode RPC up at: localhost/127.0.0.1:8020
 2017-01-23 12:30:22,380 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Starting services required for active state
 2017-01-23 12:30:22,383 INFO org.apache.hadoop.hdfs.server.blockmanagement.CacheReplicationMonitor: Starting CacheReplicationMonitor with interval 30000 milliseconds
+2017-01-23 12:31:31,570 INFO org.apache.hadoop.hdfs.server.namenode.FSNamesystem: Roll Edit Log from 127.0.0.1
+2017-01-23 12:31:31,570 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Rolling edit logs
+2017-01-23 12:31:31,570 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Ending log segment 1
+2017-01-23 12:31:31,570 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 2 Total time for transactions(ms): 1 Number of transactions batched in Syncs: 0 Number of syncs: 2 SyncTimes(ms): 21 
+2017-01-23 12:31:31,571 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Number of transactions: 2 Total time for transactions(ms): 1 Number of transactions batched in Syncs: 0 Number of syncs: 3 SyncTimes(ms): 22 
+2017-01-23 12:31:31,572 INFO org.apache.hadoop.hdfs.server.namenode.FileJournalManager: Finalizing edits file /usr/local/hadoop-2.7.3/tmp/dfs/name/current/edits_inprogress_0000000000000000001 -> /usr/local/hadoop-2.7.3/tmp/dfs/name/current/edits_0000000000000000001-0000000000000000002
+2017-01-23 12:31:31,573 INFO org.apache.hadoop.hdfs.server.namenode.FSEditLog: Starting log segment at 3
+2017-01-23 12:31:32,223 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Transfer took 0.00s at 0.00 KB/s
+2017-01-23 12:31:32,224 INFO org.apache.hadoop.hdfs.server.namenode.TransferFsImage: Downloaded file fsimage.ckpt_0000000000000000002 size 357 bytes.
+2017-01-23 12:31:32,229 INFO org.apache.hadoop.hdfs.server.namenode.NNStorageRetentionManager: Going to retain 2 images with txid >= 0

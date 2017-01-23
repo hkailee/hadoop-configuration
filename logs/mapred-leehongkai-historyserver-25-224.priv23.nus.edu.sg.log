@@ -346,3 +346,27 @@ Caused by: java.net.ConnectException: Connection refused
 	at org.apache.hadoop.ipc.Client.getConnection(Client.java:1528)
 	at org.apache.hadoop.ipc.Client.call(Client.java:1451)
 	... 33 more
+2017-01-23 12:32:49,410 INFO org.apache.hadoop.mapreduce.v2.hs.JobHistory: Starting scan to move intermediate done files
+2017-01-23 12:32:49,455 ERROR org.apache.hadoop.mapreduce.v2.hs.JobHistory: Error while scanning intermediate done dir 
+java.io.FileNotFoundException: File /tmp/hadoop-yarn/staging/history/done_intermediate does not exist.
+	at org.apache.hadoop.fs.Hdfs$DirListingIterator.<init>(Hdfs.java:211)
+	at org.apache.hadoop.fs.Hdfs$DirListingIterator.<init>(Hdfs.java:195)
+	at org.apache.hadoop.fs.Hdfs$2.<init>(Hdfs.java:177)
+	at org.apache.hadoop.fs.Hdfs.listStatusIterator(Hdfs.java:177)
+	at org.apache.hadoop.fs.FileContext$22.next(FileContext.java:1494)
+	at org.apache.hadoop.fs.FileContext$22.next(FileContext.java:1489)
+	at org.apache.hadoop.fs.FSLinkResolver.resolve(FSLinkResolver.java:90)
+	at org.apache.hadoop.fs.FileContext.listStatus(FileContext.java:1489)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.listFilteredStatus(JobHistoryUtils.java:505)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:452)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:444)
+	at org.apache.hadoop.mapreduce.v2.jobhistory.JobHistoryUtils.localGlobber(JobHistoryUtils.java:439)
+	at org.apache.hadoop.mapreduce.v2.hs.HistoryFileManager.scanIntermediateDirectory(HistoryFileManager.java:839)
+	at org.apache.hadoop.mapreduce.v2.hs.JobHistory$MoveIntermediateToDoneRunnable.run(JobHistory.java:189)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
